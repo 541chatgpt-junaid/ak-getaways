@@ -1,7 +1,9 @@
-<!DOCTYPE html><html lang="en" style=""><head>
+<!DOCTYPE html><html lang="en"><head>
+<script>document.documentElement.classList.add('js');</script>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>AK Getaways | Serviced Apartments UK | Book Direct</title>
+<link href="https://images.unsplash.com" rel="preconnect" crossorigin="">
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
@@ -11,16 +13,16 @@
        Replace these URLs easily with the client's high-res property assets
        ========================================================================== */
     :root {
-      --img-hero: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80');
-      --img-apt-athenaeum: url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=80');
-      --img-apt-calls: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=80');
-      --img-apt-wedgewood: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80');
-      --img-apt-slough1: url('https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=80');
-      --img-apt-slough2: url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80');
-      --img-loc-leeds: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80');
-      --img-loc-harrow: url('https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?auto=format&fit=crop&w=800&q=80');
-      --img-loc-slough: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80');
-      --img-about: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80');
+      --img-hero: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?fm=webp&fit=crop&w=1000&q=65');
+      --img-apt-athenaeum: url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?fm=webp&fit=crop&w=900&q=65');
+      --img-apt-calls: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?fm=webp&fit=crop&w=900&q=65');
+      --img-apt-wedgewood: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?fm=webp&fit=crop&w=900&q=65');
+      --img-apt-slough1: url('https://images.unsplash.com/photo-1493809842364-78817add7ffb?fm=webp&fit=crop&w=900&q=65');
+      --img-apt-slough2: url('https://images.unsplash.com/photo-1484154218962-a197022b5858?fm=webp&fit=crop&w=900&q=65');
+      --img-loc-leeds: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?fm=webp&fit=crop&w=800&q=65');
+      --img-loc-harrow: url('https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?fm=webp&fit=crop&w=800&q=65');
+      --img-loc-slough: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?fm=webp&fit=crop&w=800&q=65');
+      --img-about: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?fm=webp&fit=crop&w=1000&q=65');
 
       /* Brand Palette: Midnight Purple Dark Luxury */
       --bg-deep: #0b0a12;
@@ -49,6 +51,10 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+      overflow-x: hidden;
+      overflow-x: clip;
+      -webkit-text-size-adjust: 100%;
       background-color: var(--bg-deep);
       color: var(--text-main);
       font-family: var(--font-body);
@@ -58,6 +64,7 @@
 
     body {
       overflow-x: hidden;
+      overflow-x: clip;
       background: radial-gradient(circle at 15% 20%, rgba(124, 58, 237, 0.12) 0%, transparent 45%),
                   radial-gradient(circle at 85% 70%, rgba(168, 85, 247, 0.1) 0%, transparent 50%),
                   var(--bg-deep);
@@ -837,7 +844,7 @@
       margin-top: 1rem;
       max-width: 360px;
     }
-    .footer-col h4 {
+    .footer-col h2 {
       color: #fff;
       font-size: 1rem;
       margin-bottom: 1.25rem;
@@ -881,6 +888,84 @@
       opacity: 1;
       transform: translateY(0);
     }
+    /* Without JS, never hide content */
+    html:not(.js) .fade-up { opacity: 1; transform: none; }
+    .fade-up.from-left { transform: translateX(-40px); }
+    .fade-up.from-right { transform: translateX(40px); }
+    .fade-up.zoom-in { transform: scale(0.92); }
+    .fade-up.from-left.in-view, .fade-up.from-right.in-view, .fade-up.zoom-in.in-view { transform: none; }
+
+    /* Hamburger -> X */
+    .burger { position: relative; width: 22px; height: 16px; display: block; }
+    .burger span {
+      position: absolute; left: 0; width: 100%; height: 2px; border-radius: 2px;
+      background: currentColor; transition: transform 0.3s ease, opacity 0.2s ease, top 0.3s ease;
+    }
+    .burger span:nth-child(1) { top: 0; }
+    .burger span:nth-child(2) { top: 7px; }
+    .burger span:nth-child(3) { top: 14px; }
+    .mobile-toggle[aria-expanded="true"] .burger span:nth-child(1) { top: 7px; transform: rotate(45deg); }
+    .mobile-toggle[aria-expanded="true"] .burger span:nth-child(2) { opacity: 0; }
+    .mobile-toggle[aria-expanded="true"] .burger span:nth-child(3) { top: 7px; transform: rotate(-45deg); }
+    @keyframes menuItemIn {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Scroll progress bar */
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px; width: 100%; z-index: 200;
+      transform-origin: 0 50%; transform: scaleX(0);
+      background: linear-gradient(90deg, var(--purple-bright), var(--purple-soft));
+      box-shadow: 0 0 10px var(--purple-glow);
+      pointer-events: none;
+    }
+
+    /* Images fade in once loaded */
+    .js img.img-fade { opacity: 0; transition: opacity 0.6s ease, transform 0.6s ease; }
+    .js img.img-fade.loaded { opacity: 1; }
+
+    /* Hover lift on cards */
+    .apt-card, .direct-card, .host-card, .loc-card, .trust-card, .review-card {
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease, opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @media (hover: hover) {
+      .apt-card.in-view:hover, .direct-card.in-view:hover, .host-card.in-view:hover, .loc-card.in-view:hover, .trust-card.in-view:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.6), 0 0 30px var(--purple-glow);
+        border-color: rgba(168, 85, 247, 0.35);
+      }
+    }
+
+    /* Hero badge float + gradient text shimmer */
+    .hero-badge-overlay { animation: badgeFloat 4s ease-in-out infinite; }
+    @keyframes badgeFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    .hero-content h1 .gradient-text {
+      background-size: 200% auto;
+      animation: textShimmer 6s linear infinite;
+    }
+    @keyframes textShimmer {
+      to { background-position: 200% center; }
+    }
+    .btn-primary { position: relative; overflow: hidden; }
+    .btn-primary::before {
+      content: ''; position: absolute; top: 0; left: -75%; width: 50%; height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+      transform: skewX(-20deg); pointer-events: none;
+    }
+    @media (hover: hover) {
+      .btn-primary:hover::before { animation: btnShine 0.8s ease; }
+    }
+    @keyframes btnShine { to { left: 125%; } }
+
+    @media (max-width: 420px) {
+      .hero-content h1 { font-size: 2.1rem; }
+      .brand-logo { font-size: 1.25rem; }
+      .review-card { padding: 1.5rem; }
+    }
 
     @media (prefers-reduced-motion: reduce) {
       *, ::before, ::after {
@@ -891,6 +976,8 @@
       }
       .orb-glow { display: none; }
       .fade-up { opacity: 1 !important; transform: none !important; }
+      .js img.img-fade { opacity: 1; }
+      .scroll-progress { display: none; }
     }
 
     /* Responsive */
@@ -907,18 +994,60 @@
     }
     @media (max-width: 768px) {
       .nav-links {
-        display: none;
+        display: flex;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--bg-surface);
+        background: rgba(18, 15, 30, 0.97);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
         flex-direction: column;
-        padding: 1.5rem;
+        gap: 0;
+        padding: 0.5rem 1.5rem 1.5rem;
+        border-bottom: 1px solid var(--border-glass);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-12px);
+        transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+      }
+      .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .nav-links li { width: 100%; text-align: center; }
+      .nav-links li a:not(.btn) { display: block; padding: 0.9rem 0; font-size: 1.05rem; }
+      .nav-links li + li { border-top: 1px solid rgba(255, 255, 255, 0.06); }
+      .nav-links li:last-child { padding-top: 1rem; }
+      .nav-links a::after { display: none; }
+      .nav-links.active li { animation: menuItemIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both; }
+      .nav-links.active li:nth-child(2) { animation-delay: 0.05s; }
+      .nav-links.active li:nth-child(3) { animation-delay: 0.1s; }
+      .nav-links.active li:nth-child(4) { animation-delay: 0.15s; }
+      .nav-links.active li:nth-child(5) { animation-delay: 0.2s; }
+      header.site-header.menu-open {
+        background: rgba(11, 10, 18, 0.97);
         border-bottom: 1px solid var(--border-glass);
       }
-      .nav-links.active { display: flex; }
-      .mobile-toggle { display: block; }
+      .mobile-toggle { display: inline-flex; align-items: center; justify-content: center; }
+      .container { padding: 0 1rem; }
+      .section-spacing { padding: 4.5rem 0; }
+      .hero-section { min-height: auto; padding-top: 6.5rem; }
+      .hero-text { font-size: 1.05rem; }
+      .hero-actions .btn { flex: 1 1 auto; justify-content: center; text-align: center; }
+      .hero-image-wrap img { height: 300px; }
+      .apt-image { height: 220px; }
+      .section-header h2 { font-size: 2rem; }
+      .about-panel h2 { font-size: 1.9rem; }
+      .reviews-viewport { touch-action: pan-y; }
+      .orb-glow { opacity: 0.3; }
+      .orb-1, .orb-2, .orb-3 { width: 280px; height: 280px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .legal-links { flex-wrap: wrap; gap: 1rem; }
       .hero-content h1 { font-size: 2.4rem; }
       .trust-strip, .direct-grid, .apartments-grid, .host-grid, .locations-grid { grid-template-columns: 1fr; }
       .booking-form-grid { grid-template-columns: 1fr; }
@@ -929,6 +1058,7 @@
 </head>
 <body>
 <!-- Background Orbs -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 <div class="orb-glow orb-1"></div>
 <div class="orb-glow orb-2"></div>
 <div class="orb-glow orb-3"></div>
@@ -949,12 +1079,8 @@
 <li class=""><a href="#contact" class="">Contact</a></li>
 <li class=""><a class="btn btn-primary" href="#booking" style="padding:0.6rem 1.25rem; font-size:0.88rem; min-height:40px;">Check Availability</a></li>
 </ul>
-<button aria-label="Toggle Navigation Menu" class="mobile-toggle" id="mobileToggle">
-<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24">
-<line x1="3" x2="21" y1="12" y2="12"></line>
-<line x1="3" x2="21" y1="6" y2="6"></line>
-<line x1="3" x2="21" y1="18" y2="18"></line>
-</svg>
+<button aria-label="Open menu" aria-expanded="false" aria-controls="navLinks" class="mobile-toggle" id="mobileToggle" type="button">
+<span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
 </button>
 </div>
 </header>
@@ -963,7 +1089,7 @@
 <section class="hero-section">
 <div class="container">
 <div class="hero-grid">
-<div class="hero-content fade-up in-view">
+<div class="hero-content fade-up">
 <span class="eyebrow">Serviced apartments, UK</span>
 <h1 class="">Whole apartments in UK cities. <span class="gradient-text">Booked direct.</span></h1>
 <p class="hero-text">A growing portfolio of self-contained apartments for short breaks, project stays and months at a time — booked with the host, not through a platform.</p>
@@ -976,8 +1102,8 @@
 <span class="">No platform service fee. Direct contact with the host.</span>
 </div>
 </div>
-<div class="hero-image-wrap fade-up in-view" style="transition-delay: 0.15s;">
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Luxury Serviced Apartment Penthouse" loading="lazy" style="width: 100%; height: 490px; object-fit: cover;">
+<div class="hero-image-wrap fade-up" style="transition-delay: 0.15s;">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?fm=webp&fit=crop&w=1000&q=60" srcset="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?fm=webp&fit=crop&w=600&q=60 600w, https://images.unsplash.com/photo-1600585154340-be6161a56a0c?fm=webp&fit=crop&w=1000&q=60 1000w" sizes="(max-width: 1024px) 100vw, 520px" fetchpriority="high" decoding="async" width="1000" height="667" alt="Luxury Serviced Apartment Penthouse" loading="eager" style="width: 100%; height: 490px; object-fit: cover;">
 <div class="hero-badge-overlay">
 <strong>Direct Host Experience</strong> • 0% Platform Surcharge
             </div>
@@ -985,19 +1111,19 @@
 </div>
 <!-- Trust Points Strip -->
 <div class="trust-strip">
-<div class="glass-panel trust-card fade-up in-view">
+<div class="glass-panel trust-card fade-up">
 <svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
 <span class="">Apartments across multiple UK cities</span>
 </div>
-<div class="glass-panel trust-card fade-up in-view" style="transition-delay: 0.05s;">
+<div class="glass-panel trust-card fade-up" style="transition-delay: 0.05s;">
 <svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
 <span class="">Verified guest reviews</span>
 </div>
-<div class="glass-panel trust-card fade-up in-view" style="transition-delay: 0.1s;">
+<div class="glass-panel trust-card fade-up" style="transition-delay: 0.1s;">
 <svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
 <span class="">Self check-in at any hour</span>
 </div>
-<div class="glass-panel trust-card fade-up in-view" style="transition-delay: 0.15s;">
+<div class="glass-panel trust-card fade-up" style="transition-delay: 0.15s;">
 <svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
 <span class="">Book direct and save</span>
 </div>
@@ -1006,7 +1132,7 @@
 </section>
 <!-- BOOKING BAR -->
 <div class="container booking-bar-wrapper" id="booking">
-<div class="glass-panel booking-bar fade-up in-view">
+<div class="glass-panel booking-bar fade-up">
 <form id="heroBookingForm" novalidate="">
 <div class="booking-form-grid">
 <div class="form-group">
@@ -1046,28 +1172,28 @@
 <!-- SECTION: BOOK DIRECT -->
 <section class="section-spacing">
 <div class="container">
-<div class="section-header fade-up in-view">
+<div class="section-header fade-up">
 <span class="eyebrow">Direct Advantage</span>
 <h2 class="">The same apartment, without the platform in the middle.</h2>
 <p class="">Booking here goes straight to the people who run the apartments. That changes the price, the flexibility and who answers when you have a question.</p>
 </div>
 <div class="direct-grid">
-<div class="glass-panel direct-card fade-up in-view">
+<div class="glass-panel direct-card fade-up">
 <span class="card-num">01</span>
 <h3 class="">A better rate, with no platform service fee</h3>
 <p class="">We do not pay commission to a booking platform on your behalf, so your rate is lower for the same apartment on the same dates.</p>
 </div>
-<div class="glass-panel direct-card fade-up in-view" style="transition-delay: 0.1s;">
+<div class="glass-panel direct-card fade-up" style="transition-delay: 0.1s;">
 <span class="card-num">02</span>
 <h3 class="">Direct contact with the host</h3>
 <p class="">Ask about parking, late arrival or the best way to reach us and you are talking to the people who run the apartments, not a support queue.</p>
 </div>
-<div class="glass-panel direct-card fade-up in-view" style="transition-delay: 0.15s;">
+<div class="glass-panel direct-card fade-up" style="transition-delay: 0.15s;">
 <span class="card-num">03</span>
 <h3 class="">Flexibility where we can offer it</h3>
 <p class="">Early check-in and late check-out are arranged directly with us and are often possible, subject to the bookings either side of yours.</p>
 </div>
-<div class="glass-panel direct-card fade-up in-view" style="transition-delay: 0.2s;">
+<div class="glass-panel direct-card fade-up" style="transition-delay: 0.2s;">
 <span class="card-num">04</span>
 <h3 class="">Preferential rates for returning guests</h3>
 <p class="">Guests who have stayed before are quoted a returning rate on their next booking. Mention your previous stay when you enquire.</p>
@@ -1078,14 +1204,14 @@
 <!-- SECTION: WHO WE HOST -->
 <section class="section-spacing" id="who-we-host">
 <div class="container">
-<div class="section-header fade-up in-view">
+<div class="section-header fade-up">
 <span class="eyebrow">Tailored Stays</span>
 <h2 class="">Any stay. A night, a week, a month or longer.</h2>
 <p class="">Every apartment suits any reason for being there — work, a relocation, a weekend away, a house move between dates. What changes is the terms: how long you stay, how it is billed and what you need on arrival.</p>
 </div>
 <div class="host-grid">
 <!-- Card 1 -->
-<div class="glass-panel host-card fade-up in-view">
+<div class="glass-panel host-card fade-up">
 <div>
 <h3 class="">Leisure and short breaks</h3>
 <p class="">A whole apartment for the price of a room, in the middle of what you came to see. Couples, families and groups get a kitchen, a living room and the space to spend an evening together rather than in a corridor. Arrive whenever you arrive, with self check-in at any hour.</p>
@@ -1099,7 +1225,7 @@
 <a class="btn btn-outline" href="#booking" style="width:100%;">Check availability</a>
 </div>
 <!-- Card 2 -->
-<div class="glass-panel host-card fade-up in-view" style="transition-delay: 0.1s;">
+<div class="glass-panel host-card fade-up" style="transition-delay: 0.1s;">
 <div>
 <h3 class="">Corporate and contractor stays</h3>
 <p class="">A proper base for a project, not a hotel corridor. Every apartment has fast wifi and a dedicated workspace, with all bills included and no extras to claim back line by line. Weekly linen and towel changes are arranged for longer bookings, and invoicing is available.</p>
@@ -1114,7 +1240,7 @@
 <a class="btn btn-outline" href="#contact" style="width:100%;">Enquire about a corporate stay</a>
 </div>
 <!-- Card 3 -->
-<div class="glass-panel host-card fade-up in-view" style="transition-delay: 0.2s;">
+<div class="glass-panel host-card fade-up" style="transition-delay: 0.2s;">
 <div>
 <h3 class="">Extended and monthly stays</h3>
 <p class="">A fully equipped home rather than a hotel room, for guests staying a month or longer. Relocations, insurance placements and long assignments are all welcome. Monthly rates are discounted and monthly invoicing can be issued in advance.</p>
@@ -1129,7 +1255,7 @@
 <a class="btn btn-outline" href="#contact" style="width:100%;">Enquire about a monthly stay</a>
 </div>
 </div>
-<div class="glass-panel closing-box fade-up in-view">
+<div class="glass-panel closing-box fade-up">
 <p style="font-size:1.05rem; color:var(--text-sub);" class="">If your stay does not look like any of these, get in touch and tell us what you need. The terms are usually more flexible than they look.</p>
 <a class="btn btn-primary" href="#contact">Tell us what you need</a>
 </div>
@@ -1138,16 +1264,16 @@
 <!-- SECTION: OUR APARTMENTS -->
 <section class="section-spacing" id="apartments">
 <div class="container">
-<div class="section-header fade-up in-view">
+<div class="section-header fade-up">
 <span class="eyebrow">Curated Living</span>
 <h2 class="">Every apartment, in full.</h2>
 <p class="">Each one is a self-contained home with its own kitchen and living space. Choose by city, by how many you are travelling with, or by whichever room you want to wake up in.</p>
 </div>
 <div class="apartments-grid">
 <!-- Apt 1 -->
-<div class="glass-panel apt-card fade-up in-view">
+<div class="glass-panel apt-card fade-up">
 <div class="apt-image">
-<img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=80" alt="Athenaeum House, Leeds" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+<img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?fm=webp&fit=crop&w=800&q=65" srcset="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?fm=webp&fit=crop&w=480&q=65 480w, https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?fm=webp&fit=crop&w=800&q=65 800w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" decoding="async" width="800" height="533" alt="Athenaeum House, Leeds" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
 <span class="apt-badge">Leeds</span>
 </div>
 <div class="apt-details">
@@ -1160,9 +1286,9 @@
 </div>
 </div>
 <!-- Apt 2 -->
-<div class="glass-panel apt-card fade-up in-view" style="transition-delay: 0.1s;">
+<div class="glass-panel apt-card fade-up" style="transition-delay: 0.1s;">
 <div class="apt-image">
-<img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=80" alt="The Calls, Leeds" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+<img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?fm=webp&fit=crop&w=800&q=65" srcset="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?fm=webp&fit=crop&w=480&q=65 480w, https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?fm=webp&fit=crop&w=800&q=65 800w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" decoding="async" width="800" height="533" alt="The Calls, Leeds" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
 <span class="apt-badge">Leeds</span>
 </div>
 <div class="apt-details">
@@ -1175,9 +1301,9 @@
 </div>
 </div>
 <!-- Apt 3 -->
-<div class="glass-panel apt-card fade-up in-view" style="transition-delay: 0.15s;">
+<div class="glass-panel apt-card fade-up" style="transition-delay: 0.15s;">
 <div class="apt-image">
-<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80" alt="Wedgewood, Harrow" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?fm=webp&fit=crop&w=800&q=65" srcset="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?fm=webp&fit=crop&w=480&q=65 480w, https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?fm=webp&fit=crop&w=800&q=65 800w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" decoding="async" width="800" height="533" alt="Wedgewood, Harrow" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
 <span class="apt-badge">London / Harrow</span>
 </div>
 <div class="apt-details">
@@ -1190,9 +1316,9 @@
 </div>
 </div>
 <!-- Apt 4 -->
-<div class="glass-panel apt-card fade-up in-view">
+<div class="glass-panel apt-card fade-up">
 <div class="apt-image">
-<img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=80" alt="Aspire Apartment, Slough (1 Bed)" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+<img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?fm=webp&fit=crop&w=800&q=65" srcset="https://images.unsplash.com/photo-1493809842364-78817add7ffb?fm=webp&fit=crop&w=480&q=65 480w, https://images.unsplash.com/photo-1493809842364-78817add7ffb?fm=webp&fit=crop&w=800&q=65 800w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" decoding="async" width="800" height="533" alt="Aspire Apartment, Slough (1 Bed)" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
 <span class="apt-badge">Slough</span>
 </div>
 <div class="apt-details">
@@ -1205,9 +1331,9 @@
 </div>
 </div>
 <!-- Apt 5 -->
-<div class="glass-panel apt-card fade-up in-view" style="transition-delay: 0.1s;">
+<div class="glass-panel apt-card fade-up" style="transition-delay: 0.1s;">
 <div class="apt-image">
-<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80" alt="Aspire Apartment, Slough (2 Bed)" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?fm=webp&fit=crop&w=800&q=65" srcset="https://images.unsplash.com/photo-1484154218962-a197022b5858?fm=webp&fit=crop&w=480&q=65 480w, https://images.unsplash.com/photo-1484154218962-a197022b5858?fm=webp&fit=crop&w=800&q=65 800w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" decoding="async" width="800" height="533" alt="Aspire Apartment, Slough (2 Bed)" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
 <span class="apt-badge">Slough</span>
 </div>
 <div class="apt-details">
@@ -1225,12 +1351,12 @@
 <!-- SECTION: GUEST REVIEWS -->
 <section class="section-spacing">
 <div class="container">
-<div class="section-header fade-up in-view">
+<div class="section-header fade-up">
 <span class="eyebrow">Guest Sentiments</span>
 <h2 class="">In their words.</h2>
 <p class="">Unedited reviews from guests who have stayed with us.</p>
 </div>
-<div class="reviews-viewport fade-up in-view">
+<div class="reviews-viewport fade-up">
 <div class="reviews-track" id="reviewsTrack">
 <!-- Review 1 -->
 <div class="glass-panel review-card">
@@ -1295,15 +1421,15 @@
 <!-- SECTION: LOCATIONS -->
 <section class="section-spacing" id="locations">
 <div class="container">
-<div class="section-header fade-up in-view">
+<div class="section-header fade-up">
 <span class="eyebrow">Key Destinations</span>
 <h2 class="">Where we operate.</h2>
 <p class="">Booked direct, wherever the apartment is.</p>
 </div>
 <div class="locations-grid">
 <!-- Loc 1 -->
-<div class="loc-card fade-up in-view">
-<img alt="Leeds city street architecture" class="loc-bg" loading="lazy" src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80">
+<div class="loc-card fade-up">
+<img alt="Leeds city street architecture" class="loc-bg" loading="lazy" src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?fm=webp&fit=crop&w=800&q=65" srcset="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?fm=webp&fit=crop&w=480&q=65 480w, https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?fm=webp&fit=crop&w=800&q=65 800w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" decoding="async" width="800" height="533">
 <div class="loc-overlay"></div>
 <div class="loc-content">
 <span class="badge">2 Apartments</span>
@@ -1312,8 +1438,8 @@
 </div>
 </div>
 <!-- Loc 2 -->
-<div class="loc-card fade-up in-view" style="transition-delay: 0.1s;">
-<img alt="London cityscape near Harrow Metropolitan link" class="loc-bg" loading="lazy" src="https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?auto=format&fit=crop&w=800&q=80">
+<div class="loc-card fade-up" style="transition-delay: 0.1s;">
+<img alt="London cityscape near Harrow Metropolitan link" class="loc-bg" loading="lazy" src="https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?fm=webp&fit=crop&w=800&q=65" srcset="https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?fm=webp&fit=crop&w=480&q=65 480w, https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?fm=webp&fit=crop&w=800&q=65 800w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" decoding="async" width="800" height="533">
 <div class="loc-overlay"></div>
 <div class="loc-content">
 <span class="badge">1 Apartment</span>
@@ -1322,8 +1448,8 @@
 </div>
 </div>
 <!-- Loc 3 -->
-<div class="loc-card fade-up in-view" style="transition-delay: 0.15s;">
-<img alt="Modern business park buildings in Slough Thames Valley" class="loc-bg" loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80">
+<div class="loc-card fade-up" style="transition-delay: 0.15s;">
+<img alt="Modern business park buildings in Slough Thames Valley" class="loc-bg" loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?fm=webp&fit=crop&w=800&q=65" srcset="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?fm=webp&fit=crop&w=480&q=65 480w, https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?fm=webp&fit=crop&w=800&q=65 800w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px" decoding="async" width="800" height="533">
 <div class="loc-overlay"></div>
 <div class="loc-content">
 <span class="badge">2 Apartments</span>
@@ -1332,7 +1458,7 @@
 </div>
 </div>
 <!-- Loc 4 -->
-<div class="loc-card fade-up in-view" style="transition-delay: 0.2s;">
+<div class="loc-card fade-up" style="transition-delay: 0.2s;">
 <div class="loc-overlay" style="background: radial-gradient(circle at center, rgba(124,58,237,0.3), var(--bg-deep));"></div>
 <div class="loc-content">
 <span class="badge" style="color:var(--purple-soft);">Expanding Network</span>
@@ -1343,7 +1469,7 @@
 </div>
 </div>
 <!-- Amenities Bar -->
-<div class="glass-panel amenities-bar fade-up in-view">
+<div class="glass-panel amenities-bar fade-up">
 <h3 class="">In every apartment</h3>
 <div class="amenities-grid">
 <div class="amenity-item">
@@ -1387,7 +1513,7 @@
 <div class="container">
 <div class="split-grid">
 <!-- Enquiry Form Panel -->
-<div class="glass-panel enquiry-panel fade-up in-view">
+<div class="glass-panel enquiry-panel fade-up">
 <span class="eyebrow">Direct Booking</span>
 <h2 style="font-size:2.2rem; color:#fff; margin-bottom:0.75rem;" class="">Tell us your dates.</h2>
 <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1.75rem;" class="">Pick your dates and book the apartment directly with us. If you are planning further ahead, or you need somewhere for a team or a longer stay, send an enquiry and we will come back with what is available.</p>
@@ -1432,7 +1558,7 @@
 </form>
 </div>
 <!-- About AK Getaways Panel -->
-<div class="glass-panel about-panel fade-up in-view" style="transition-delay: 0.15s;">
+<div class="glass-panel about-panel fade-up" style="transition-delay: 0.15s;">
 <span class="eyebrow">The Host Team</span>
 <h2 class="">About AK Getaways</h2>
 <div class="about-subhead">An independent serviced-accommodation operator, and the people you deal with directly.</div>
@@ -1467,7 +1593,7 @@
 <p class="footer-desc">Self-contained serviced apartments across UK cities, booked direct with the host.</p>
 </div>
 <div class="footer-col">
-<h4 class="">Pages</h4>
+<h2 class="">Pages</h2>
 <ul class="footer-links">
 <li class=""><a href="#" class="">Home</a></li>
 <li class=""><a href="#apartments" class="">Our Apartments</a></li>
@@ -1476,7 +1602,7 @@
 </ul>
 </div>
 <div class="footer-col">
-<h4 class="">Direct Contact</h4>
+<h2 class="">Direct Contact</h2>
 <ul class="footer-links">
 <li class="">Email: <a href="mailto:inquiries@akpropertygetaways.com" class="">inquiries@akpropertygetaways.com</a></li>
 <li class="">Phone: <a href="tel:+447307352816" class="">+44 7307 352816</a></li>
@@ -1497,37 +1623,82 @@
 <!-- SCRIPT: INTERACTION & VALIDATION -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // 1. Sticky Navbar on Scroll
+      // 1. Sticky Navbar + scroll progress bar
       const header = document.getElementById('siteHeader');
+      const progress = document.getElementById('scrollProgress');
+      let ticking = false;
+      function onScroll() {
+        header.classList.toggle('scrolled', window.scrollY > 40);
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
+        ticking = false;
+      }
       window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-      });
+        if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
+      }, { passive: true });
+      onScroll();
 
       // 2. Mobile Menu Toggle
       const mobileToggle = document.getElementById('mobileToggle');
       const navLinks = document.getElementById('navLinks');
-      if (mobileToggle) {
-        mobileToggle.addEventListener('click', () => {
-          navLinks.classList.toggle('active');
+      function setMenu(open) {
+        navLinks.classList.toggle('active', open);
+        header.classList.toggle('menu-open', open);
+        mobileToggle.setAttribute('aria-expanded', String(open));
+        mobileToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      }
+      mobileToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setMenu(!navLinks.classList.contains('active'));
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+      document.addEventListener('click', (e) => {
+        if (navLinks.classList.contains('active') && !header.contains(e.target)) setMenu(false);
+      });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+      window.addEventListener('resize', () => { if (window.innerWidth > 768) setMenu(false); });
+
+      // 3. Smooth scroll for in-page links (also closes the menu first)
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+          const id = link.getAttribute('href');
+          const target = id === '#' ? document.body : document.querySelector(id);
+          if (!target) return;
+          e.preventDefault();
+          const top = id === '#' ? 0 : target.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 12;
+          window.scrollTo({ top, behavior: 'smooth' });
+          if (id !== '#') history.replaceState(null, '', id);
         });
+      });
+
+      // 4. Scroll Reveal Animations (IntersectionObserver)
+      document.querySelectorAll('.hero-content').forEach(el => el.classList.add('from-left'));
+      document.querySelectorAll('.hero-image-wrap, .about-panel').forEach(el => el.classList.add('from-right'));
+      document.querySelectorAll('.loc-card, .closing-box, .amenities-bar').forEach(el => el.classList.add('zoom-in'));
+      const animatedElements = document.querySelectorAll('.fade-up');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        animatedElements.forEach(el => observer.observe(el));
+      } else {
+        animatedElements.forEach(el => el.classList.add('in-view'));
       }
 
-      // 3. Scroll Reveal Animations (IntersectionObserver)
-      const animatedElements = document.querySelectorAll('.fade-up');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-          }
-        });
-      }, { threshold: 0.1 });
-      animatedElements.forEach(el => observer.observe(el));
+      // 5. Fade images in once they have loaded
+      document.querySelectorAll('img').forEach(img => {
+        img.classList.add('img-fade');
+        const done = () => img.classList.add('loaded');
+        if (img.complete) done();
+        else { img.addEventListener('load', done); img.addEventListener('error', done); }
+      });
 
-      // 4. Booking Bar Validation & Submission
+      // 6. Booking Bar Validation & Submission
       const heroForm = document.getElementById('heroBookingForm');
       const bookingFeedback = document.getElementById('bookingFeedback');
       
@@ -1573,7 +1744,7 @@
         bookingFeedback.classList.add('success');
       });
 
-      // 5. Enquiry Form Validation
+      // 7. Enquiry Form Validation
       const enquiryForm = document.getElementById('enquiryForm');
       const enquiryFeedback = document.getElementById('enquiryFeedback');
       const enqArrival = document.getElementById('enqArrival');
@@ -1611,7 +1782,7 @@
         enquiryForm.reset();
       });
 
-      // 6. Reviews Slider
+      // 8. Reviews Slider
       const track = document.getElementById('reviewsTrack');
       const prevBtn = document.getElementById('prevReview');
       const nextBtn = document.getElementById('nextReview');
@@ -1640,6 +1811,17 @@
           updateSlide();
         }
       });
+
+      // Swipe support for reviews on touch screens
+      let touchStartX = null;
+      track.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', (e) => {
+        if (touchStartX === null) return;
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) > 40) (dx < 0 ? nextBtn : prevBtn).click();
+        touchStartX = null;
+      });
+      window.addEventListener('resize', updateSlide);
     });
   </script>
 
