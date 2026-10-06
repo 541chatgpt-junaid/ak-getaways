@@ -1,0 +1,1651 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>AK Getaways | Serviced Apartments UK | Book Direct</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+<style>
+    /* ==========================================================================
+       IMAGE CONFIGURATION
+       Replace these URLs easily with the client's high-res property assets
+       ========================================================================== */
+    :root {
+      --img-hero: url('https://www.akpropertygetaways.com/assets/provider/istock/2184225194.jpg?w=1200');
+      --img-apt-athenaeum: url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=80');
+      --img-apt-calls: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=80');
+      --img-apt-wedgewood: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80');
+      --img-apt-slough1: url('https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=80');
+      --img-apt-slough2: url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80');
+      --img-loc-leeds: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80');
+      --img-loc-harrow: url('https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?auto=format&fit=crop&w=800&q=80');
+      --img-loc-slough: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80');
+      --img-about: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80');
+
+      /* Brand Palette: Midnight Purple Dark Luxury */
+      --bg-deep: #0b0a12;
+      --bg-surface: #14111f;
+      --bg-card: rgba(26, 21, 41, 0.65);
+      --bg-card-hover: rgba(36, 29, 58, 0.85);
+      --purple-accent: #7c3aed;
+      --purple-bright: #a855f7;
+      --purple-soft: #c4b5fd;
+      --purple-glow: rgba(168, 85, 247, 0.25);
+      --text-main: #f5f3ff;
+      --text-muted: #948fb3;
+      --text-sub: #cbd5e1;
+      --border-glass: rgba(168, 85, 247, 0.18);
+      --border-glow: rgba(196, 181, 253, 0.35);
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-display: 'Space Grotesk', sans-serif;
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-deep);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    body {
+      overflow-x: hidden;
+      background: radial-gradient(circle at 15% 20%, rgba(124, 58, 237, 0.12) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 70%, rgba(168, 85, 247, 0.1) 0%, transparent 50%),
+                  var(--bg-deep);
+      position: relative;
+    }
+
+    /* Ambient animated orbs */
+    .orb-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.45;
+      animation: floatOrb 18s ease-in-out infinite alternate;
+    }
+    .orb-1 { width: 500px; height: 500px; background: #7c3aed; top: -100px; left: -100px; }
+    .orb-2 { width: 600px; height: 600px; background: #9333ea; top: 35%; right: -150px; animation-duration: 22s; }
+    .orb-3 { width: 450px; height: 450px; background: #4c1d95; bottom: 800px; left: -100px; animation-duration: 15s; }
+
+    @keyframes floatOrb {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(40px, 60px) scale(1.08); }
+      100% { transform: translate(-30px, 30px) scale(0.95); }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    button, input, select, textarea {
+      font-family: inherit;
+    }
+
+    /* Typography Utilities */
+    h1, h2, h3, h4, .display-font {
+      font-family: var(--font-display);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--purple-bright);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: var(--purple-bright);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--purple-bright);
+    }
+
+    /* Container & Layout */
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .section-spacing {
+      padding: 6.5rem 0;
+    }
+
+    /* Glassmorphism Surface */
+    .glass-panel {
+      background: var(--bg-card);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-glass);
+      border-radius: 1.25rem;
+      transition: var(--transition);
+    }
+    .glass-panel:hover {
+      border-color: var(--border-glow);
+      box-shadow: 0 16px 36px -10px var(--purple-glow);
+    }
+
+    /* Interactive Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.75rem;
+      min-height: 48px;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #7c3aed, #a855f7);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(124, 58, 237, 0.45);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(168, 85, 247, 0.6);
+      background: linear-gradient(135deg, #6d28d9, #9333ea);
+    }
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--purple-soft);
+      border: 1px solid var(--border-glass);
+      backdrop-filter: blur(8px);
+    }
+    .btn-outline:hover {
+      background: rgba(168, 85, 247, 0.15);
+      border-color: var(--purple-bright);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* Navigation Bar */
+    header.site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.25rem 0;
+      transition: var(--transition);
+    }
+    header.site-header.scrolled {
+      background: rgba(11, 10, 18, 0.85);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--border-glass);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand-logo {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .brand-logo span {
+      color: var(--purple-bright);
+      font-weight: 800;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-sub);
+      font-size: 0.95rem;
+      font-weight: 500;
+      position: relative;
+    }
+    .nav-links a:hover {
+      color: var(--purple-soft);
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--purple-bright);
+      transition: width 0.3s ease;
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border-glass);
+      border-radius: 8px;
+      color: #fff;
+      padding: 0.5rem;
+      cursor: pointer;
+      min-width: 44px;
+      min-height: 44px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      min-height: 100vh;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    .hero-content h1 {
+      font-size: 3.8rem;
+      font-weight: 800;
+      line-height: 1.08;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
+    }
+    .hero-content h1 .gradient-text {
+      background: linear-gradient(135deg, #ffffff 40%, var(--purple-soft) 80%, var(--purple-bright) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-text {
+      font-size: 1.18rem;
+      color: var(--text-sub);
+      margin-bottom: 2rem;
+      max-width: 540px;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.75rem;
+    }
+    .hero-subline {
+      font-size: 0.9rem;
+      color: var(--purple-soft);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .hero-image-wrap {
+      position: relative;
+      border-radius: 1.75rem;
+      overflow: hidden;
+      border: 1px solid var(--border-glass);
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 40px var(--purple-glow);
+    }
+    .hero-image-wrap img {
+      width: 100%;
+      height: 490px;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+      background-color: var(--bg-surface);
+    }
+    .hero-image-wrap:hover img {
+      transform: scale(1.03);
+    }
+    .hero-badge-overlay {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      padding: 0.9rem 1.4rem;
+      background: rgba(15, 12, 25, 0.88);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-glass);
+      border-radius: 1rem;
+      font-size: 0.85rem;
+      color: #ffffff;
+    }
+
+    /* Trust Points Strip */
+    .trust-strip {
+      margin-top: 3.5rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+    }
+    .trust-card {
+      padding: 1.15rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-sub);
+    }
+    .trust-card svg {
+      flex-shrink: 0;
+      color: var(--purple-bright);
+    }
+
+    /* Booking Bar */
+    .booking-bar-wrapper {
+      margin-top: -2rem;
+      margin-bottom: 5rem;
+      position: relative;
+      z-index: 20;
+    }
+    .booking-bar {
+      padding: 1.75rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+    .booking-form-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr 1fr auto;
+      gap: 1.2rem;
+      align-items: end;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .form-group label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--purple-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .form-control {
+      width: 100%;
+      height: 48px;
+      background: rgba(15, 12, 24, 0.75);
+      border: 1px solid var(--border-glass);
+      border-radius: 0.75rem;
+      padding: 0 1rem;
+      color: #fff;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      outline: none;
+    }
+    .form-control:focus {
+      border-color: var(--purple-bright);
+      box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.2);
+    }
+    .form-feedback {
+      grid-column: 1 / -1;
+      font-size: 0.88rem;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      margin-top: 0.5rem;
+      display: none;
+    }
+    .form-feedback.success {
+      display: block;
+      background: rgba(34, 197, 94, 0.15);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      color: #86efac;
+    }
+    .form-feedback.error {
+      display: block;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #fca5a5;
+    }
+
+    /* Section Headings */
+    .section-header {
+      margin-bottom: 3.5rem;
+      max-width: 680px;
+    }
+    .section-header h2 {
+      font-size: 2.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    .section-header p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+    }
+
+    /* Section: Book Direct */
+    .direct-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+    }
+    .direct-card {
+      padding: 2.2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .direct-card .card-num {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--purple-bright);
+      margin-bottom: 1rem;
+      display: inline-block;
+      background: rgba(168, 85, 247, 0.1);
+      padding: 0.2rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid var(--border-glass);
+    }
+    .direct-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+      color: #fff;
+    }
+    .direct-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    /* Section: Who We Host */
+    .host-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+    .host-card {
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .host-card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    .host-card > p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      flex-grow: 0;
+    }
+    .host-points {
+      list-style: none;
+      margin-bottom: 2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .host-points li {
+      font-size: 0.88rem;
+      color: var(--text-sub);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .host-points li svg {
+      color: var(--purple-bright);
+      flex-shrink: 0;
+      margin-top: 0.2rem;
+    }
+    .closing-box {
+      margin-top: 2.5rem;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    /* Section: Apartments Grid */
+    .apartments-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .apt-card {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .apt-image {
+      height: 250px;
+      overflow: hidden;
+      position: relative;
+      background-color: var(--bg-surface);
+    }
+    .apt-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .apt-card:hover .apt-image img {
+      transform: scale(1.07);
+    }
+    .apt-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(11, 10, 18, 0.85);
+      border: 1px solid var(--border-glass);
+      color: var(--purple-soft);
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      backdrop-filter: blur(8px);
+    }
+    .apt-details {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .apt-details h3 {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .apt-details p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+    .apt-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-glass);
+      font-size: 0.86rem;
+      color: var(--purple-soft);
+      font-weight: 600;
+    }
+
+    /* Reviews Slider */
+    .reviews-viewport {
+      position: relative;
+      overflow: hidden;
+      padding: 1rem 0 2rem;
+    }
+    .reviews-track {
+      display: flex;
+      gap: 1.5rem;
+      transition: transform 0.5s ease;
+    }
+    .review-card {
+      min-width: calc(33.333% - 1rem);
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .review-quote {
+      font-size: 0.98rem;
+      color: var(--text-sub);
+      line-height: 1.65;
+      margin-bottom: 1.75rem;
+      position: relative;
+    }
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: #fff;
+      font-size: 1rem;
+    }
+    .review-author .avatar-initial {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--purple-accent), var(--purple-bright));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.88rem;
+    }
+    .slider-controls {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .slider-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .slider-btn:hover {
+      background: var(--purple-accent);
+      border-color: var(--purple-bright);
+    }
+
+    /* Locations Grid */
+    .locations-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+    .loc-card {
+      border-radius: 1.25rem;
+      overflow: hidden;
+      position: relative;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.75rem;
+      border: 1px solid var(--border-glass);
+    }
+    .loc-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+      z-index: 0;
+      background-color: var(--bg-surface);
+    }
+    .loc-card:hover .loc-bg {
+      transform: scale(1.08);
+    }
+    .loc-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(11, 10, 18, 0.95) 20%, rgba(11, 10, 18, 0.4) 70%, transparent 100%);
+      z-index: 1;
+    }
+    .loc-content {
+      position: relative;
+      z-index: 2;
+    }
+    .loc-content h3 {
+      font-size: 1.35rem;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+    .loc-content p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .loc-content .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--purple-bright);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    /* Amenities Grid */
+    .amenities-bar {
+      padding: 2.5rem;
+    }
+    .amenities-bar h3 {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .amenity-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--text-sub);
+    }
+    .amenity-item svg {
+      color: var(--purple-bright);
+      flex-shrink: 0;
+    }
+
+    /* Enquiry & About Section */
+    .split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+    .enquiry-panel {
+      padding: 2.75rem;
+    }
+    .form-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .about-panel {
+      padding: 2.75rem;
+    }
+    .about-panel h2 {
+      font-size: 2.4rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .about-subhead {
+      font-size: 1.1rem;
+      color: var(--purple-soft);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+    .about-body p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.7;
+    }
+    .about-checklist {
+      list-style: none;
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+    }
+    .about-checklist li {
+      font-size: 0.88rem;
+      color: var(--text-sub);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .about-checklist li svg {
+      color: var(--purple-bright);
+    }
+
+    /* Footer */
+    footer.site-footer {
+      background: #07060c;
+      border-top: 1px solid var(--border-glass);
+      padding: 5rem 0 2.5rem;
+      margin-top: 6rem;
+      position: relative;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1.5fr;
+      gap: 3rem;
+      margin-bottom: 3.5rem;
+    }
+    .footer-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-top: 1rem;
+      max-width: 360px;
+    }
+    .footer-col h4 {
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .footer-links a:hover {
+      color: var(--purple-bright);
+    }
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .legal-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    /* Scroll Animations */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .fade-up.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .orb-glow { display: none; }
+      .fade-up { opacity: 1 !important; transform: none !important; }
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-content h1 { font-size: 3rem; }
+      .hero-image-wrap img { height: 380px; }
+      .trust-strip { grid-template-columns: repeat(2, 1fr); }
+      .booking-form-grid { grid-template-columns: 1fr 1fr; }
+      .direct-grid, .apartments-grid, .host-grid, .locations-grid { grid-template-columns: repeat(2, 1fr); }
+      .amenities-grid { grid-template-columns: repeat(2, 1fr); }
+      .review-card { min-width: calc(50% - 0.75rem); }
+      .split-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-surface);
+        flex-direction: column;
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--border-glass);
+      }
+      .nav-links.active { display: flex; }
+      .mobile-toggle { display: block; }
+      .hero-content h1 { font-size: 2.4rem; }
+      .trust-strip, .direct-grid, .apartments-grid, .host-grid, .locations-grid { grid-template-columns: 1fr; }
+      .booking-form-grid { grid-template-columns: 1fr; }
+      .review-card { min-width: 100%; }
+      .form-row, .about-checklist, .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<!-- Background Orbs -->
+<div class="orb-glow orb-1"></div>
+<div class="orb-glow orb-2"></div>
+<div class="orb-glow orb-3"></div>
+<!-- Sticky Navbar -->
+<header class="site-header" id="siteHeader">
+<div class="container nav-wrapper">
+<a class="brand-logo" href="#">
+<svg fill="none" height="28" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" style="color:var(--purple-bright);" viewBox="0 0 24 24" width="28">
+<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        AK<span class="">Getaways</span>
+</a>
+<ul class="nav-links" id="navLinks">
+<li class=""><a href="#apartments" class="">Our Apartments</a></li>
+<li class=""><a href="#who-we-host" class="">Corporate &amp; Long Stays</a></li>
+<li class=""><a href="#locations" class="">Locations</a></li>
+<li class=""><a href="#contact" class="">Contact</a></li>
+<li class=""><a class="btn btn-primary" href="#booking" style="padding:0.6rem 1.25rem; font-size:0.88rem; min-height:40px;">Check Availability</a></li>
+</ul>
+<button aria-label="Toggle Navigation Menu" class="mobile-toggle" id="mobileToggle">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24">
+<line x1="3" x2="21" y1="12" y2="12"></line>
+<line x1="3" x2="21" y1="6" y2="6"></line>
+<line x1="3" x2="21" y1="18" y2="18"></line>
+</svg>
+</button>
+</div>
+</header>
+<main>
+<!-- HERO SECTION -->
+<section class="hero-section">
+<div class="container">
+<div class="hero-grid">
+<div class="hero-content fade-up in-view">
+<span class="eyebrow">Serviced apartments, UK</span>
+<h1 class="">Whole apartments in UK cities. <span class="gradient-text">Booked direct.</span></h1>
+<p class="hero-text">A growing portfolio of self-contained apartments for short breaks, project stays and months at a time — booked with the host, not through a platform.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#booking">Check availability</a>
+<a class="btn btn-outline" href="#who-we-host">Corporate &amp; long stays</a>
+</div>
+<div class="hero-subline">
+<svg fill="none" height="18" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="18"><polyline points="20 6 9 17 4 12"></polyline></svg>
+<span class="">No platform service fee. Direct contact with the host.</span>
+</div>
+</div>
+<div class="hero-image-wrap fade-up in-view" style="transition-delay: 0.15s;">
+<img src="https://lh3.googleusercontent.com/aida/AEtjO1X9rJxYuuSIwvic7Lc97T6rctm5WLytjoj0Nzj5HzB_URDJXM90PnpWZXOc11tZj96-W3yYxMDyR2phnJ6Y60_TvUVfvMMNOSvtOS5GKpYbGbp-NTritMrVgW_L0FjpDFDoAnKdiqs8MQ-otv80FmEYeZ6PVqsOYJKpGDCYLo8VwScv4gfkY3YAmC-RHJf6gqA71XdqRbStLAmQkgrnQsdquhFAN9y0oAaGqvQmDgOE" alt="Luxury Serviced Apartment Penthouse" loading="lazy" style="width: 100%; height: 490px; object-fit: cover;">
+<div class="hero-badge-overlay">
+<strong>Direct Host Experience</strong> • 0% Platform Surcharge
+            </div>
+</div>
+</div>
+<!-- Trust Points Strip -->
+<div class="trust-strip">
+<div class="glass-panel trust-card fade-up in-view">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+<span class="">Apartments across multiple UK cities</span>
+</div>
+<div class="glass-panel trust-card fade-up in-view" style="transition-delay: 0.05s;">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+<span class="">Verified guest reviews</span>
+</div>
+<div class="glass-panel trust-card fade-up in-view" style="transition-delay: 0.1s;">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+<span class="">Self check-in at any hour</span>
+</div>
+<div class="glass-panel trust-card fade-up in-view" style="transition-delay: 0.15s;">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+<span class="">Book direct and save</span>
+</div>
+</div>
+</div>
+</section>
+<!-- BOOKING BAR -->
+<div class="container booking-bar-wrapper" id="booking">
+<div class="glass-panel booking-bar fade-up in-view">
+<form id="heroBookingForm" novalidate="">
+<div class="booking-form-grid">
+<div class="form-group">
+<label for="citySelect" class="">Destination City</label>
+<select class="form-control" id="citySelect" required="">
+<option disabled="" selected="" value="">Select destination</option>
+<option value="Leeds">Leeds</option>
+<option value="Harrow, London">Harrow, London</option>
+<option value="Slough">Slough</option>
+</select>
+</div>
+<div class="form-group">
+<label for="arrivalDate" class="">Arrival date</label>
+<input class="form-control" id="arrivalDate" required="" type="date" min="2026-10-06">
+</div>
+<div class="form-group">
+<label for="departureDate" class="">Departure date</label>
+<input class="form-control" id="departureDate" required="" type="date" min="2026-10-06">
+</div>
+<div class="form-group">
+<label for="guestsSelect" class="">Guests</label>
+<select class="form-control" id="guestsSelect" required="">
+<option value="1-2">1-2 Guests</option>
+<option value="3-4">3-4 Guests</option>
+<option value="5-6">5-6 Guests</option>
+<option value="7-8">7-8 Guests</option>
+</select>
+</div>
+<div class="form-group">
+<button class="btn btn-primary" style="width:100%; white-space:nowrap;" type="submit">Check availability</button>
+</div>
+<div class="form-feedback" id="bookingFeedback"></div>
+</div>
+</form>
+</div>
+</div>
+<!-- SECTION: BOOK DIRECT -->
+<section class="section-spacing">
+<div class="container">
+<div class="section-header fade-up in-view">
+<span class="eyebrow">Direct Advantage</span>
+<h2 class="">The same apartment, without the platform in the middle.</h2>
+<p class="">Booking here goes straight to the people who run the apartments. That changes the price, the flexibility and who answers when you have a question.</p>
+</div>
+<div class="direct-grid">
+<div class="glass-panel direct-card fade-up in-view">
+<span class="card-num">01</span>
+<h3 class="">A better rate, with no platform service fee</h3>
+<p class="">We do not pay commission to a booking platform on your behalf, so your rate is lower for the same apartment on the same dates.</p>
+</div>
+<div class="glass-panel direct-card fade-up in-view" style="transition-delay: 0.1s;">
+<span class="card-num">02</span>
+<h3 class="">Direct contact with the host</h3>
+<p class="">Ask about parking, late arrival or the best way to reach us and you are talking to the people who run the apartments, not a support queue.</p>
+</div>
+<div class="glass-panel direct-card fade-up in-view" style="transition-delay: 0.15s;">
+<span class="card-num">03</span>
+<h3 class="">Flexibility where we can offer it</h3>
+<p class="">Early check-in and late check-out are arranged directly with us and are often possible, subject to the bookings either side of yours.</p>
+</div>
+<div class="glass-panel direct-card fade-up in-view" style="transition-delay: 0.2s;">
+<span class="card-num">04</span>
+<h3 class="">Preferential rates for returning guests</h3>
+<p class="">Guests who have stayed before are quoted a returning rate on their next booking. Mention your previous stay when you enquire.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: WHO WE HOST -->
+<section class="section-spacing" id="who-we-host">
+<div class="container">
+<div class="section-header fade-up in-view">
+<span class="eyebrow">Tailored Stays</span>
+<h2 class="">Any stay. A night, a week, a month or longer.</h2>
+<p class="">Every apartment suits any reason for being there — work, a relocation, a weekend away, a house move between dates. What changes is the terms: how long you stay, how it is billed and what you need on arrival.</p>
+</div>
+<div class="host-grid">
+<!-- Card 1 -->
+<div class="glass-panel host-card fade-up in-view">
+<div>
+<h3 class="">Leisure and short breaks</h3>
+<p class="">A whole apartment for the price of a room, in the middle of what you came to see. Couples, families and groups get a kitchen, a living room and the space to spend an evening together rather than in a corridor. Arrive whenever you arrive, with self check-in at any hour.</p>
+<ul class="host-points">
+<li class=""><svg fill="none" height="16" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="16"><polyline points="20 6 9 17 4 12"></polyline></svg> Self check-in at any hour</li>
+<li class=""><svg fill="none" height="16" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="16"><polyline points="20 6 9 17 4 12"></polyline></svg> Whole apartment, not a shared building</li>
+<li class=""><svg fill="none" height="16" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="16"><polyline points="20 6 9 17 4 12"></polyline></svg> Space to eat and relax together</li>
+<li class=""><svg fill="none" height="16" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="16"><polyline points="20 6 9 17 4 12"></polyline></svg> Close to venues, museums and restaurants</li>
+</ul>
+</div>
+<a class="btn btn-outline" href="#booking" style="width:100%;">Check availability</a>
+</div>
+<!-- Card 2 -->
+<div class="glass-panel host-card fade-up in-view" style="transition-delay: 0.1s;">
+<div>
+<h3 class="">Corporate and contractor stays</h3>
+<p class="">A proper base for a project, not a hotel corridor. Every apartment has fast wifi and a dedicated workspace, with all bills included and no extras to claim back line by line. Weekly linen and towel changes are arranged for longer bookings, and invoicing is available.</p>
+<ul class="host-points">
+<li class=""><svg fill="none" height="16" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="16"><polyline points="20 6 9 17 4 12"></polyline></svg> Fast wifi and a dedicated workspace</li>
+<li class=""><svg fill="none" height="16" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="16"><polyline points="20 6 9 17 4 12"></polyline></svg> All bills included</li>
+<li class=""><svg fill="none" height="16" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="16"><polyline points="20 6 9 17 4 12"></polyline></svg> Weekly linen and towel changes</li>
+<li class=""><svg fill="none" height="16" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="16"><polyline points="20 6 9 17 4 12"></polyline></svg> Invoicing available</li>
+<li class=""><svg fill="none" height="16" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="16"><polyline points="20 6 9 17 4 12"></polyline></svg> Flexible check-in for late arrivals</li>
+</ul>
+</div>
+<a class="btn btn-outline" href="#contact" style="width:100%;">Enquire about a corporate stay</a>
+</div>
+<!-- Card 3 -->
+<div class="glass-panel host-card fade-up in-view" style="transition-delay: 0.2s;">
+<div>
+<h3 class="">Extended and monthly stays</h3>
+<p class="">A fully equipped home rather than a hotel room, for guests staying a month or longer. Relocations, insurance placements and long assignments are all welcome. Monthly rates are discounted and monthly invoicing can be issued in advance.</p>
+<ul class="host-points">
+<li class=""><svg fill="none" height="16" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="16"><polyline points="20 6 9 17 4 12"></polyline></svg> Discounted long-stay rates</li>
+<li class=""><svg fill="none" height="16" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="16"><polyline points="20 6 9 17 4 12"></polyline></svg> Monthly invoicing in advance</li>
+<li class=""><svg fill="none" height="16" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="16"><polyline points="20 6 9 17 4 12"></polyline></svg> Full kitchen and laundry</li>
+<li class=""><svg fill="none" height="16" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="16"><polyline points="20 6 9 17 4 12"></polyline></svg> Storage and workspace in the apartment</li>
+<li class=""><svg fill="none" height="16" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="16"><polyline points="20 6 9 17 4 12"></polyline></svg> Direct contact with the host throughout</li>
+</ul>
+</div>
+<a class="btn btn-outline" href="#contact" style="width:100%;">Enquire about a monthly stay</a>
+</div>
+</div>
+<div class="glass-panel closing-box fade-up in-view">
+<p style="font-size:1.05rem; color:var(--text-sub);" class="">If your stay does not look like any of these, get in touch and tell us what you need. The terms are usually more flexible than they look.</p>
+<a class="btn btn-primary" href="#contact">Tell us what you need</a>
+</div>
+</div>
+</section>
+<!-- SECTION: OUR APARTMENTS -->
+<section class="section-spacing" id="apartments">
+<div class="container">
+<div class="section-header fade-up in-view">
+<span class="eyebrow">Curated Living</span>
+<h2 class="">Every apartment, in full.</h2>
+<p class="">Each one is a self-contained home with its own kitchen and living space. Choose by city, by how many you are travelling with, or by whichever room you want to wake up in.</p>
+</div>
+<div class="apartments-grid">
+<!-- Apt 1 -->
+<div class="glass-panel apt-card fade-up in-view">
+<div class="apt-image">
+<img src="https://lh3.googleusercontent.com/aida/AEtjO1VxARXmFon15dzlDJNOgXJsCC9BT9ZAx-iFGHN00Ro66Ja4BOU_C3pFNz22zsBrRxwBlGuDVPDyaDwrmnGq0bqr4y6zaOfwGbvWZ8b1fuE6p3wykMPMu0tILxvQaD6mLTedPV8IOLGSpz8Pc_j8L-zLe4jXgprHm1YDww_FkofzfT_bPII0Ewc22h2Wc-XA9HGHz8LqdFD91OIE_aKD_nyByBbfxaK9KSeKqghmkn0" alt="Athenaeum House, Leeds" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+<span class="apt-badge">Leeds</span>
+</div>
+<div class="apt-details">
+<h3 class="">Athenaeum House, Leeds</h3>
+<p class="">A heritage conversion with double-height living space and a mezzanine bedroom.</p>
+<div class="apt-meta">
+<span class="">1 bedroom · sleeps 4</span>
+<a class="btn btn-outline" href="#" style="padding:0.4rem 1rem; min-height:36px; font-size:0.82rem;">View details</a>
+</div>
+</div>
+</div>
+<!-- Apt 2 -->
+<div class="glass-panel apt-card fade-up in-view" style="transition-delay: 0.1s;">
+<div class="apt-image">
+<img src="https://lh3.googleusercontent.com/aida/AEtjO1XsGQppncNws-1RCZME7r1BE00rOqmIazQDyTzo8ZTzAhcMQYmiAYjqCsYrX-CEt5zSeK_9lvgR5GqLAxQdkulRPR81CBpFi1uLoLevQdTnu-4ae9fMqyMYsEfpjkw4TZXHToAV0NMhphLy1SXSMnkLWtUdr6jP6OKhd_g2UZUtJ0JMSrNoj6y4UAKqHgKpmahZBd9XVZDWk5_UgghRa_8WXYlMqGFUqmrYMWqjvb5m" alt="The Calls, Leeds" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+<span class="apt-badge">Leeds</span>
+</div>
+<div class="apt-details">
+<h3 class="">The Calls, Leeds</h3>
+<p class="">Two bedrooms and two bathrooms, with room for eight to spread out.</p>
+<div class="apt-meta">
+<span class="">2 bedrooms · sleeps 8</span>
+<a class="btn btn-outline" href="#" style="padding:0.4rem 1rem; min-height:36px; font-size:0.82rem;">View details</a>
+</div>
+</div>
+</div>
+<!-- Apt 3 -->
+<div class="glass-panel apt-card fade-up in-view" style="transition-delay: 0.15s;">
+<div class="apt-image">
+<img src="https://lh3.googleusercontent.com/aida/AEtjO1VP7Wt5wjVF74JI0KkXVgSw0aeTRRiYtEemJlo1_eDp2LU1IqAFDg4xszxvBXl8x1QZ797xQQ36siA1NREL4ErZJOHsofHitjMK1BZYXYf8zJjkdyNBxm82W3xTfH_Zk1MWv8BhUb5k3sHZAbJ0n1_qir9fGpKQUFq38evarTv4f4kGj-5QtfZBRqqL-sIBUoIWytQAljnYvsvmnpFRsK7BvVNeBkFmDD4bBdxTAevC" alt="Wedgewood, Harrow" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+<span class="apt-badge">London / Harrow</span>
+</div>
+<div class="apt-details">
+<h3 class="">Wedgewood, Harrow</h3>
+<p class="">One bedroom sleeping six, a short walk from the Metropolitan line.</p>
+<div class="apt-meta">
+<span class="">1 bedroom · sleeps 6</span>
+<a class="btn btn-outline" href="#" style="padding:0.4rem 1rem; min-height:36px; font-size:0.82rem;">View details</a>
+</div>
+</div>
+</div>
+<!-- Apt 4 -->
+<div class="glass-panel apt-card fade-up in-view">
+<div class="apt-image">
+<img src="https://lh3.googleusercontent.com/aida/AEtjO1WHJBq17YN8PF3Cgtp-UP3yswvnnQyOrmiCqqcZ-QsBSvtsqK6QNxvnEmWp6mWDHxETBD4ECEgc8_IAq_C0D5vbn8yEvfTJrSBuXo0n8lKpNreI9_tn8UPWcNN_5K4NkUYvEq5sp3wy3CaXFIOp40Qh9sDgO8SBRQxEXrEdWVXFHZHJp4MGuI4BhSEN2D7z-dSNhebWQPWJYm38qJJaJCa03Wb4xKH7FtZ3NsykSk23" alt="Aspire Apartment, Slough (1 Bed)" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+<span class="apt-badge">Slough</span>
+</div>
+<div class="apt-details">
+<h3 class="">Aspire Apartment, Slough</h3>
+<p class="">One bedroom sleeping six, with quick road access to the M4.</p>
+<div class="apt-meta">
+<span class="">1 bedroom · sleeps 6</span>
+<a class="btn btn-outline" href="#" style="padding:0.4rem 1rem; min-height:36px; font-size:0.82rem;">View details</a>
+</div>
+</div>
+</div>
+<!-- Apt 5 -->
+<div class="glass-panel apt-card fade-up in-view" style="transition-delay: 0.1s;">
+<div class="apt-image">
+<img src="https://lh3.googleusercontent.com/aida/AEtjO1WuxCVaWnslHYj_63Ev7K0vcc7DO9s8uzWRf2UMri24ItAtgKjqlwTdBUViS2DrXlFpHytu9-Nfr0zYa2LeBZJNuEBaRZIx-4j9frGSW2GZR6L-_4rUpp-CLI-27-rXU5s6-VfMRaNBknpywwlvcF-ZYudRmY_qsbe5pB-V4WzU6Dhm0cxFN_nmlhXkYdJ-m06_KqCkBLe2k8TXTSHb-S44a8ClkcdnthtnOOrJyQj2" alt="Aspire Apartment, Slough (2 Bed)" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+<span class="apt-badge">Slough</span>
+</div>
+<div class="apt-details">
+<h3 class="">Aspire Apartment, Slough</h3>
+<p class="">Two bedrooms and two bathrooms, sleeping eight near the business parks.</p>
+<div class="apt-meta">
+<span class="">2 bedrooms · sleeps 8</span>
+<a class="btn btn-outline" href="#" style="padding:0.4rem 1rem; min-height:36px; font-size:0.82rem;">View details</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: GUEST REVIEWS -->
+<section class="section-spacing">
+<div class="container">
+<div class="section-header fade-up in-view">
+<span class="eyebrow">Guest Sentiments</span>
+<h2 class="">In their words.</h2>
+<p class="">Unedited reviews from guests who have stayed with us.</p>
+</div>
+<div class="reviews-viewport fade-up in-view">
+<div class="reviews-track" id="reviewsTrack">
+<!-- Review 1 -->
+<div class="glass-panel review-card">
+<p class="review-quote">"Absolutely excellent stay. The accommodation was lovely, modern, beautifully presented and very comfortable. Everything was clean, well maintained and exactly what we needed for our stay. The communication from the host was also fantastic from start to finish."</p>
+<div class="review-author">
+<div class="avatar-initial">W</div>
+<div class="">Wahid</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="glass-panel review-card">
+<p class="review-quote">"The accommodation was absolutely wonderful, and the host was cooperative, friendly, and quick to respond. Thank you for everything. If I visit Leeds again, I will definitely stay here."</p>
+<div class="review-author">
+<div class="avatar-initial">F</div>
+<div class="">Faisal</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="glass-panel review-card">
+<p class="review-quote">"Had an amazing stay. Responsive host. Lovely layout and decor. Would definitely recommend and hope to stay again. Not far from Wembley Arena either, and close to train station."</p>
+<div class="review-author">
+<div class="avatar-initial">J</div>
+<div class="">Jasmine</div>
+</div>
+</div>
+<!-- Review 4 -->
+<div class="glass-panel review-card">
+<p class="review-quote">"Second time I stayed, so I love this place. Easy access to city centre, beautifully furnished, easy check in and a great host."</p>
+<div class="review-author">
+<div class="avatar-initial">M</div>
+<div class="">Murphy</div>
+</div>
+</div>
+<!-- Review 5 -->
+<div class="glass-panel review-card">
+<p class="review-quote">"Was really late when I booked, around 10pm, and the response was quick. Easy to find and had access to the apartment really quickly. Place was tidy and clean and really home feeling."</p>
+<div class="review-author">
+<div class="avatar-initial">M</div>
+<div class="">Marco</div>
+</div>
+</div>
+<!-- Review 6 -->
+<div class="glass-panel review-card">
+<p class="review-quote">"Used as a base for business meetings in the city. The host was excellent. Very responsive and great communication."</p>
+<div class="review-author">
+<div class="avatar-initial">R</div>
+<div class="">Richard</div>
+</div>
+</div>
+</div>
+</div>
+<div class="slider-controls">
+<button aria-label="Previous Review" class="slider-btn" id="prevReview">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline points="15 18 9 12 15 6"></polyline></svg>
+</button>
+<button aria-label="Next Review" class="slider-btn" id="nextReview">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><polyline points="9 18 15 12 9 6"></polyline></svg>
+</button>
+</div>
+</div>
+</section>
+<!-- SECTION: LOCATIONS -->
+<section class="section-spacing" id="locations">
+<div class="container">
+<div class="section-header fade-up in-view">
+<span class="eyebrow">Key Destinations</span>
+<h2 class="">Where we operate.</h2>
+<p class="">Booked direct, wherever the apartment is.</p>
+</div>
+<div class="locations-grid">
+<!-- Loc 1 -->
+<div class="loc-card fade-up in-view">
+<img alt="Leeds city street architecture" class="loc-bg" loading="lazy" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+<div class="loc-overlay"></div>
+<div class="loc-content">
+<span class="badge">2 Apartments</span>
+<h3 class="">Leeds</h3>
+<p class="">A walkable centre with restored arcades, a large market and a busy arts scene.</p>
+</div>
+</div>
+<!-- Loc 2 -->
+<div class="loc-card fade-up in-view" style="transition-delay: 0.1s;">
+<img alt="London cityscape near Harrow Metropolitan link" class="loc-bg" loading="lazy" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+<div class="loc-overlay"></div>
+<div class="loc-content">
+<span class="badge">1 Apartment</span>
+<h3 class="">Harrow</h3>
+<p class="">North-west London, on the Metropolitan line straight into the centre.</p>
+</div>
+</div>
+<!-- Loc 3 -->
+<div class="loc-card fade-up in-view" style="transition-delay: 0.15s;">
+<img alt="Modern business park buildings in Slough Thames Valley" class="loc-bg" loading="lazy" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+<div class="loc-overlay"></div>
+<div class="loc-content">
+<span class="badge">2 Apartments</span>
+<h3 class="">Slough</h3>
+<p class="">Thames Valley business parks, with the M4 and Heathrow close by.</p>
+</div>
+</div>
+<!-- Loc 4 -->
+<div class="loc-card fade-up in-view" style="transition-delay: 0.2s;">
+<div class="loc-overlay" style="background: radial-gradient(circle at center, rgba(124,58,237,0.3), var(--bg-deep));"></div>
+<div class="loc-content">
+<span class="badge" style="color:var(--purple-soft);">Expanding Network</span>
+<h3 class="">Coming soon</h3>
+<p style="margin-bottom:1rem;" class="">More locations coming soon. We are opening apartments in new cities regularly. Ask about yours — we may already be able to cover your dates.</p>
+<a class="btn btn-outline" href="#contact" style="padding:0.4rem 0.9rem; font-size:0.82rem; min-height:36px;">Ask about this city</a>
+</div>
+</div>
+</div>
+<!-- Amenities Bar -->
+<div class="glass-panel amenities-bar fade-up in-view">
+<h3 class="">In every apartment</h3>
+<div class="amenities-grid">
+<div class="amenity-item">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" x2="12.01" y1="20" y2="20"></line></svg>
+<span class="">High-speed wifi</span>
+</div>
+<div class="amenity-item">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+<span class="">Fully equipped kitchen</span>
+</div>
+<div class="amenity-item">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><rect height="15" rx="2" ry="2" width="20" x="2" y="7"></rect><polyline points="17 2 12 7 7 2"></polyline></svg>
+<span class="">Smart TV</span>
+</div>
+<div class="amenity-item">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+<span class="">Self check-in</span>
+</div>
+<div class="amenity-item">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+<span class="">Fresh linen and towels</span>
+</div>
+<div class="amenity-item">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+<span class="">Toiletries</span>
+</div>
+<div class="amenity-item">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><rect height="14" rx="2" ry="2" width="20" x="2" y="3"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>
+<span class="">Workspace</span>
+</div>
+<div class="amenity-item">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+<span class="">All bills included</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: ENQUIRY & ABOUT -->
+<section class="section-spacing" id="contact">
+<div class="container">
+<div class="split-grid">
+<!-- Enquiry Form Panel -->
+<div class="glass-panel enquiry-panel fade-up in-view">
+<span class="eyebrow">Direct Booking</span>
+<h2 style="font-size:2.2rem; color:#fff; margin-bottom:0.75rem;" class="">Tell us your dates.</h2>
+<p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1.75rem;" class="">Pick your dates and book the apartment directly with us. If you are planning further ahead, or you need somewhere for a team or a longer stay, send an enquiry and we will come back with what is available.</p>
+<form class="form-stack" id="enquiryForm" novalidate="">
+<div class="form-row">
+<div class="form-group">
+<label for="enqName" class="">Your name</label>
+<input class="form-control" id="enqName" placeholder="Full name" required="" type="text">
+</div>
+<div class="form-group">
+<label for="enqEmail" class="">Email address</label>
+<input class="form-control" id="enqEmail" placeholder="name@domain.com" required="" type="email">
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="enqPhone" class="">Phone number</label>
+<input class="form-control" id="enqPhone" placeholder="+44 7000 000000" required="" type="tel">
+</div>
+<div class="form-group">
+<label for="enqCity" class="">City or apartment</label>
+<input class="form-control" id="enqCity" placeholder="e.g. Leeds, The Calls" required="" type="text">
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="enqArrival" class="">Arrival date</label>
+<input class="form-control" id="enqArrival" required="" type="date" min="2026-10-06">
+</div>
+<div class="form-group">
+<label for="enqNights" class="">Number of nights</label>
+<input class="form-control" id="enqNights" min="1" placeholder="e.g. 5" required="" type="number">
+</div>
+</div>
+<div class="form-group">
+<label for="enqMessage" class="">Anything else</label>
+<textarea class="form-control" id="enqMessage" placeholder="Special requests, arrival time, parking, company details..." rows="3" style="height:auto; padding:0.75rem 1rem;"></textarea>
+</div>
+<button class="btn btn-primary" style="width:100%;" type="submit">Send enquiry</button>
+<div class="form-feedback" id="enquiryFeedback"></div>
+<p style="font-size:0.82rem; color:var(--purple-soft); text-align:center; margin-top:0.5rem;" class="">No platform service fee. We reply within a few hours.</p>
+</form>
+</div>
+<!-- About AK Getaways Panel -->
+<div class="glass-panel about-panel fade-up in-view" style="transition-delay: 0.15s;">
+<span class="eyebrow">The Host Team</span>
+<h2 class="">About AK Getaways</h2>
+<div class="about-subhead">An independent serviced-accommodation operator, and the people you deal with directly.</div>
+<div class="about-body">
+<p class="">We provide high-quality, fully equipped apartments across a growing number of UK cities, for stays of a night, a week, a month or longer. Every apartment is chosen and finished to a standard we would be happy to stay in ourselves.</p>
+<p class="">We are independent, which means you deal with the host rather than a platform. Booking direct keeps the rate lower and the service personal — the person who answers your enquiry is the person who looks after your stay.</p>
+<p class="">Our commitment is straightforward. Clean, comfortable, well-equipped spaces. Quick, useful replies. And a stay that runs easily from enquiry to check-out, whether you are here for a weekend, working away, or settling in for longer.</p>
+</div>
+<ul class="about-checklist">
+<li class=""><svg fill="none" height="18" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="18"><polyline points="20 6 9 17 4 12"></polyline></svg> Apartments across UK cities</li>
+<li class=""><svg fill="none" height="18" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="18"><polyline points="20 6 9 17 4 12"></polyline></svg> Direct with the host, no platform</li>
+<li class=""><svg fill="none" height="18" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="18"><polyline points="20 6 9 17 4 12"></polyline></svg> Self check-in at any time</li>
+<li class=""><svg fill="none" height="18" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="18"><polyline points="20 6 9 17 4 12"></polyline></svg> Highly rated by guests</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="site-footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<a class="brand-logo" href="#">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" width="24">
+<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+            AK<span class="">Getaways</span>
+</a>
+<p class="footer-desc">Self-contained serviced apartments across UK cities, booked direct with the host.</p>
+</div>
+<div class="footer-col">
+<h4 class="">Pages</h4>
+<ul class="footer-links">
+<li class=""><a href="#" class="">Home</a></li>
+<li class=""><a href="#apartments" class="">Our Apartments</a></li>
+<li class=""><a href="#who-we-host" class="">Corporate &amp; Long Stays</a></li>
+<li class=""><a href="#contact" class="">Contact</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4 class="">Direct Contact</h4>
+<ul class="footer-links">
+<li class="">Email: <a href="mailto:inquiries@akpropertygetaways.com" class="">inquiries@akpropertygetaways.com</a></li>
+<li class="">Phone: <a href="tel:+447307352816" class="">+44 7307 352816</a></li>
+<li style="margin-top:0.5rem; color:var(--purple-soft); font-size:0.85rem;" class="">Fast replies direct from the host</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="">© 2026 AK Getaways. All rights reserved.</div>
+<div class="legal-links">
+<a href="#" class="">Terms</a>
+<a href="#" class="">Privacy</a>
+<a href="#" class="">Cancellation Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- SCRIPT: INTERACTION & VALIDATION -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Sticky Navbar on Scroll
+      const header = document.getElementById('siteHeader');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // 2. Mobile Menu Toggle
+      const mobileToggle = document.getElementById('mobileToggle');
+      const navLinks = document.getElementById('navLinks');
+      if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      }
+
+      // 3. Scroll Reveal Animations (IntersectionObserver)
+      const animatedElements = document.querySelectorAll('.fade-up');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      }, { threshold: 0.1 });
+      animatedElements.forEach(el => observer.observe(el));
+
+      // 4. Booking Bar Validation & Submission
+      const heroForm = document.getElementById('heroBookingForm');
+      const bookingFeedback = document.getElementById('bookingFeedback');
+      
+      // Set default minimum date to today
+      const today = new Date().toISOString().split('T')[0];
+      const arrivalInput = document.getElementById('arrivalDate');
+      const departureInput = document.getElementById('departureDate');
+      arrivalInput.min = today;
+      departureInput.min = today;
+
+      heroForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const city = document.getElementById('citySelect').value;
+        const arrival = arrivalInput.value;
+        const departure = departureInput.value;
+        const guests = document.getElementById('guestsSelect').value;
+
+        bookingFeedback.className = 'form-feedback';
+
+        if (!city || !arrival || !departure) {
+          bookingFeedback.textContent = 'Please fill out all search criteria before checking availability.';
+          bookingFeedback.classList.add('error');
+          return;
+        }
+
+        if (new Date(arrival) < new Date(today)) {
+          bookingFeedback.textContent = 'Arrival date cannot be in the past.';
+          bookingFeedback.classList.add('error');
+          return;
+        }
+
+        if (new Date(departure) <= new Date(arrival)) {
+          bookingFeedback.textContent = 'Departure date must be after your arrival date.';
+          bookingFeedback.classList.add('error');
+          return;
+        }
+
+        /* ======================================================================
+           CONNECT BOOKING ENGINE HERE
+           Example: window.location.href = `/book?city=${encodeURIComponent(city)}&from=${arrival}&to=${departure}&guests=${guests}`;
+           ====================================================================== */
+        bookingFeedback.textContent = `Direct rates confirmed! Searching direct availability in ${city} for ${guests} guests (${arrival} to ${departure})...`;
+        bookingFeedback.classList.add('success');
+      });
+
+      // 5. Enquiry Form Validation
+      const enquiryForm = document.getElementById('enquiryForm');
+      const enquiryFeedback = document.getElementById('enquiryFeedback');
+      const enqArrival = document.getElementById('enqArrival');
+      enqArrival.min = today;
+
+      enquiryForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('enqName').value.trim();
+        const email = document.getElementById('enqEmail').value.trim();
+        const phone = document.getElementById('enqPhone').value.trim();
+        const city = document.getElementById('enqCity').value.trim();
+        const arrival = enqArrival.value;
+        const nights = document.getElementById('enqNights').value;
+
+        enquiryFeedback.className = 'form-feedback';
+
+        if (!name || !email || !phone || !city || !arrival || !nights) {
+          enquiryFeedback.textContent = 'Please complete all required fields.';
+          enquiryFeedback.classList.add('error');
+          return;
+        }
+
+        if (new Date(arrival) < new Date(today)) {
+          enquiryFeedback.textContent = 'Arrival date cannot be in the past.';
+          enquiryFeedback.classList.add('error');
+          return;
+        }
+
+        /* ======================================================================
+           CONNECT ENQUIRY ENDPOINT HERE
+           Example: fetch('/api/enquiry', { method: 'POST', body: JSON.stringify({...}) });
+           ====================================================================== */
+        enquiryFeedback.textContent = `Thank you, ${name}! Your direct enquiry for ${city} has been received. Our host team will contact you at ${email} shortly.`;
+        enquiryFeedback.classList.add('success');
+        enquiryForm.reset();
+      });
+
+      // 6. Reviews Slider
+      const track = document.getElementById('reviewsTrack');
+      const prevBtn = document.getElementById('prevReview');
+      const nextBtn = document.getElementById('nextReview');
+      let currentSlide = 0;
+
+      function updateSlide() {
+        const cardWidth = track.querySelector('.review-card').offsetWidth + 24; // width + gap
+        track.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
+      }
+
+      nextBtn.addEventListener('click', () => {
+        const totalCards = track.querySelectorAll('.review-card').length;
+        const visibleCount = window.innerWidth <= 768 ? 1 : (window.innerWidth <= 1024 ? 2 : 3);
+        if (currentSlide < totalCards - visibleCount) {
+          currentSlide++;
+          updateSlide();
+        } else {
+          currentSlide = 0;
+          updateSlide();
+        }
+      });
+
+      prevBtn.addEventListener('click', () => {
+        if (currentSlide > 0) {
+          currentSlide--;
+          updateSlide();
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+</body></html>
